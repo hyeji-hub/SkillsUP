@@ -43,6 +43,10 @@ body:after{
     height: 140px;
     margin-bottom: 15px;
 }
+.feature_box img:hover{
+    transform: rotate(3deg);
+    transition: 500ms;
+}
 .feature_box h1{
     margin-bottom: 1rem;
     font-weight: 700;
