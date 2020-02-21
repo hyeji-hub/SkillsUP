@@ -99,7 +99,7 @@ section .to-do-contents ul li:not(:last-child) {
     margin: 0 20px;
     font-size: 17px;
 }
-.remove-button {
+.delete-button {
     background-color: transparent;
     border: none;
     font-size: 12px;
