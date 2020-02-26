@@ -1,43 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <title>Modal</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="to-do-list-container">
-        <header>
-            <h1>To Do List</h1>
-        </header>
-        <main>
-            <section>
-                <form action="#" method="GET" class="to-do-upload">
-                    <input type="text" id="upload-bar"class="to-do-upload-bar" placeholder="What I have to do" />
-                    <button type="submit" class="upload-button">upload</button>
-                    <div class="to-do-contents">
-                        <ul>
-                            <li>
-                                <input type="checkbox" class="input-check">
-                                <strong>Buying a pen</strong>
-                                <button type="button" class="delete-button">delete</button>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="input-check">
-                                <strong>Eating 10 hambergurs for lunch</strong>
-                                <button type="button" class="delete-button">delete</button>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="input-check">
-                                <strong>Studying JavaScript</strong>
-                                <button type="button" class="delete-button">delete</button>
-                            </li>
-                        </ul>
-                    </div>
-                </form>
-            </section>
-        </main>
+    <button class="open">펭하!</button>
+    <div class="modal hidden">
+        <div class="modal_background"></div>
+        <div class="modal_content">
+            <img src="./img/image.jpg" alt="">
+            <button class="close">❌ 펭바!</button>
+        </div>
     </div>
     <script src="./app.js"></script>
 </body>
