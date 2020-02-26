@@ -1,110 +1,75 @@
-*{ margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
-
+* { margin: 0; padding: 0; box-sizing: border-box;}
 html {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
     line-height: 1.5;
-    color: #1f2d3d;
 }
-
-body { 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+body {
     width: 100%;
     height: 100vh;
-    background-color: #f8f9fa;
+    position: relative;
 }
 
-body::after {
-    content: "HYEJI©HOI";
-    font-size: 12px;
-    color: #1f2d3d;
+.open {
+    all:unset;
+    background-color: #000;
+    color: #fff;
     font-weight: 600;
-    margin-top: 30px;
+    padding: 10px 30px;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .2s;
+    cursor: pointer;
+}
+.open:hover {
+    opacity: 0.9;
+    margin-top: 2px;
 }
 
-.to-do-list-container {
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 640px;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 30px 60px;
-    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.03);
+    height: 100%;
+    position: relative;
 }
-
-header h1 {
-    font-weight: 700;
-    font-size: 32px;
+.hidden {
+    display: none;
 }
-
-section {
-    margin-top: 12px;
+.modal .modal_background {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.modal_content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    background-color: #fff;
+    padding: 30px 0px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
-section .to-do-uploade-bar {
-    width: 420px;
-    max-width: 840px;
-    height: 40px;
-    padding-left: 20px;
-    border-radius: 4px;
-    border: 1px solid #dbdbdb;
+.modal_content img {
+    width: 80%;
+    border-radius: 8px;
 }
-section .upload-button {
-    /* width: 90px; */
-    height: 40px;
-    border-radius: 4px;
-    padding: 0 22px;
-    border: none;
-    margin-left: 5px;
-    cursor: pointer;
+.modal_content .close {
+    all:unset;
+    font-size: 16px;
     font-weight: 600;
-
+    margin-top: 30px;
+    padding: 10px 30px;
+    border-radius: 8px;
     color: #fff;
-    background-color: #ff4438;
-}
-section .upload-button:hover {
-    /* opacity: 90%; */
-    background-color: #ff3526;
-}
-section .to-do-upload input:focus,
-section .to-do-upload button:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-section .to-do-contents {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-}
-section .to-do-contents ul li {
-    width: 100%;
-    padding: 12px 5px;
-    border-radius: 4px;
-}
-section .to-do-contents ul li:not(:last-child) {
-    border-bottom: 1px solid #dbdbdb;
-}
-.to-do-contents ul li .input-check {
-    width: 15px;
-    height: 15px;
-    transform: translateY(3px);
-}
-.to-do-contents ul li strong {
-    margin: 0 20px;
-    font-size: 17px;
-}
-.delete-button {
-    background-color: transparent;
-    border: none;
-    font-size: 12px;
-    font-weight: 600;
-    color: #ff4438;
+    background-color: #000;
     cursor: pointer;
-    padding: 5px;
+}
+.close:hover {
+    opacity: 0.9;
 }
